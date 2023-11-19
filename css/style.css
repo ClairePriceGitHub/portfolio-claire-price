@@ -53,8 +53,7 @@ p {
   margin: 25px;
 }
 
-/* HERO IMAGE */
-
+/* hero image */
 .hero {
   background-color: #a200ff;
   height: 500px;
@@ -63,82 +62,79 @@ p {
 
 /* MAIN SECTIONS */
 
+/* outer container for main sections */
 .container {
-  margin: 0% 10%;
+  margin: 3% 10%;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr;
-
 }
 
+/* outer container for main sections */
 .container-titles {
-  border-right: 5pt solid #ffffff;
-  margin: 5pt 5pt;
-  padding-right: 15pt;
+  border-right: 5px solid #ffffff;
+  padding-right: 30px;
   text-align: right;
   min-width: 100px;
 }
 
 .container-about {
-  background-color: aqua;
-  margin: 5pt 5pt;
-  padding: 5pt 5pt;
+  padding-left: 30px;
 }
 
 .container-work {
   display: grid;
+  padding-left: 30px;
   grid-template-columns: 50vh 50vh;
-  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 15px;
   grid-template-areas: 
-    "image-main image-main"
-    "image-1 image-2"
-    "image-3 image-4";
-}
-
-
-
-.image-main {
-  grid-area: image-main;
-  object-fit:contain;
-  width: 100%;
-  border: 5pt solid #a200ff;
-  
+    "image-1 image-1"
+    "image-1 image-1"
+    "image-2 image-3"
+    "image-4 image-5";
 }
 
 .image-1 {
   grid-area: image-1;
-  object-fit: contain;
-  width: 100%;
-  max-height: 100%;
-  border: 5pt solid #a200ff;
+  
 }
-
 .image-2 {
   grid-area: image-2;
-  object-fit: fill;
-  width: 100%;
-  max-height: 100%;
-  border: 5pt solid #a200ff;
 }
 
 .image-3 {
   grid-area: image-3;
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  border: 5pt solid #a200ff;
 }
 
 .image-4 {
   grid-area: image-4;
+}
+
+.image-5 {
+  grid-area: image-5;
+}
+
+/* overlapping header over image */
+.image-1 h2, 
+.image-2 h2, 
+.image-3 h2, 
+.image-4 h2, 
+.image-5 h2 {
+  margin: -100px 0px 0px 30px;
+}
+
+.container-work img {
+  max-width: 100%;
+  height: auto;
+  border: 5pt solid #ffffff;
   object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  border: 5pt solid #a200ff;
 }
 
 .container-contact {
   display: flex;
+  padding: 0px 0px 80px 30px;
   justify-content: space-evenly;
   align-items: center;
 }
