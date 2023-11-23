@@ -1,26 +1,22 @@
-/* GENERAL */
+/* LINKS */
 
-/* unvisited link */
-a:link {
-  color: white;
-}
-
-/* visited link */
+a:link,
 a:visited {
   color: white;
 }
 
-/* mouse over link */
+ 
+
 a:hover {
   color: white;
   background-color: #ff8906;
 }
 
-/* selected link */
 a:active {
   color: #f25f4c;
 }
 
+/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -77,6 +73,14 @@ p {
   font-size: 1rem;
 }
 
+.card-overlay-text {
+  position: relative;
+  margin-top: -80px;
+  background-color: #f25f4cae;
+  padding: 3px 30px;
+  text-align: left;
+}
+
 /* LOGO & NAVIGATION */
 
 .nav-bar {
@@ -85,11 +89,11 @@ p {
 }
 
 .nav-bar h5 {
-  background-color: #f25f4cae;
+  background-color: #f25f4c;
   padding: 3px 30px;
 }
 
-/* Flexbox within .nav-bar: two columns for logo and navigation*/
+/* Flexbox within navigation bar: two columns for logo and navigation*/
 .nav-content {
   display: flex;
   justify-content: space-between;
@@ -98,7 +102,7 @@ p {
   margin-right: 10%;
 }
 
-/* Flexbox within .nav-content: columns for links */
+/* Flexbox within navigation content: columns for links */
 .nav-content-links {
   display: flex;
   justify-content: flex-end;
@@ -109,7 +113,7 @@ p {
   margin: 25px;
 }
 
-/* hero banner */
+/* Hero banner */
 .hero-banner {
   display: flex;
   flex-direction: column;
@@ -123,125 +127,146 @@ p {
   margin-right: 10%;
 }
 
-.card-overlay-text {
-  position: relative;
-  margin-top: -80px;
-  background-color: #f25f4cae;
-  padding: 3px 30px;
-}
-
 .hero-banner img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-
 /* MAIN */
 
 .page-wrapper {
   margin: 3% 10%;
+}
+
+/* About section: grid 2 columns */
+.page-section-about {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  margin: 30px 0px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
   grid-template-areas: 
-    "section-about"
-    "section-work"
-    "section-contact";
+  "title-about container-about";
 }
 
-/* sections */
-.section-about {
-  grid-area: section-about;
+.title-about {
+  grid-area: title-about;
 }
 
-.section-work {
-  grid-area: section-work;
+.container-about {
+  grid-area: container-about;
 }
 
-.section-contact {
-  grid-area: section-contact;
-}
-
-.section-titles {
-  display: inline-block;
-  padding: 0px 30px 30px 0px;
-  vertical-align: top;
-  text-align: right;
-  min-width: 20%;
-}
-
-.section-titles h2 {
-  line-height: 1;
-}
-
-
-
-/* section content */
-.about-content {
-  display: inline-block;
-  padding: 0px 0px 30px 30px;
-  border-left: 5px solid #000000;
-  max-width: 70%;
-}
-
-.work-container {
-  display: inline-grid;
-  width: 70%;
-  height:auto;
-  padding-left: 0px;
-  grid-template-columns: 60vh 60vh;
-  grid-template-rows:  2fr 1fr 1fr;
-  column-gap: 0px;
-  row-gap: 0px;
+/* Work section: grid 2 columns: second column holds nested grid for portfolio work images */
+.page-section-work {
+  display: grid;
+  margin: 30px 0px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
   grid-template-areas: 
-    "image-1 image-1"
-    "image-2 image-3"
-    "image-4 image-5";
+  "title-work container-work-images";
+}
+
+.title-work {
+  grid-area: title-work;
+}
+
+/* Nested grid: work images */
+.container-work-images {
+  grid-area: container-work-images;
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: repeat (4, 1fr);
+}
+
+.container-work-images .card-overlay {
+  margin-right: 55%;
 }
 
 .image-1 {
-  grid-area: image-1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 .image-2 {
-  grid-area: image-2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .image-3 {
-  grid-area: image-3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .image-4 {
-  grid-area: image-4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 
 .image-5 {
-  grid-area: image-5;
-}
-
-/* overlapping header over image */
-
-
-.container-work img {
-  max-width: 100%;
-  height: auto;
-  border: 5pt solid #000000;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
   object-fit: cover;
 }
 
-.container-work h2 {
-  margin-top: -100px;
+.work-image {
+  width: 100%;
+  height: 100%;
+  
 }
 
-.contact-container {
-  display: inline-flex;
-  width: 70%;
-  padding: 50px 0px 50px 30px;
-  border-left: 5px solid #000000;
-  justify-content: space-evenly;
+.work-image h5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+/* Contact section: grid 2 columns: second column holds nested flexbox for contact info links */
+.page-section-contact {
+  display: grid;
+  margin: 30px 0px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "title-contact container-contact";
+}
+
+.title-contact {
+  grid-area: title-contact;
+}
+
+.container-contact {
+  grid-area: container-contact;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
+/* Sections general design */
+.title-about,
+.title-work,
+.title-contact {
+  vertical-align: top;
+  text-align: right;
+  line-height: 1;
+  padding: 0px 30px 0px 0px;
+  border-right: 5px solid #000000;
+}
 
-
+.container-about,
+.container-contact {
+  
+  padding: 0px 0px 0px 30px;
+  width: 100%;
+}
