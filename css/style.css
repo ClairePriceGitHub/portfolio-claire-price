@@ -1,6 +1,9 @@
 /* PSEUDO-CLASS ELEMENTS */
 
-
+:root {
+  --link-hover-bg-color: #ff8906;
+  --card-overlay: #f25f4c9b;
+}
 
 /* GENERAL */
 
@@ -10,7 +13,7 @@
 }
 
 body {
-  background-color: rgba(128, 128, 128, 0.226);
+  background-color: lightgrey;
   margin: 0;
   padding: 0;
   font-family: 'Geneva', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -59,7 +62,6 @@ p {
   font-size: 1rem;
 }
 
-
 /* LOGO & NAVIGATION */
 
 .nav-bar {
@@ -101,12 +103,12 @@ p {
   
 .nav-content-links a:hover {
   color: white;
-  background-color: #ff8906;
+  background-color: var(--link-hover-bg-color);
   padding: 3px 10px;
 }
   
 .nav-content-links a:active {
-  color: #000000;
+  color: black;
 }
 
 /* HERO BANNER */
@@ -148,11 +150,10 @@ p {
 
 .mugshot h5 {
   grid-area: mugshot-text;
-  background-color: #f25f4c9b;
+  background-color: var(--card-overlay);
   text-align: center;
   padding: 3px 10px;
 }
-
 
 /* MAIN */
 
@@ -258,6 +259,7 @@ p {
 
 }
 
+/* Flexbox for card overlay */
 .work-image {
   width: 100%;
   height: 100%;
@@ -273,7 +275,7 @@ p {
 .container-work-images h5 {
   position: relative;
   margin-top: -80px;
-  background-color: #f25f4cae;
+  background-color: var(--card-overlay);
   padding: 3px 10px;
   text-align: left;
 }
@@ -315,13 +317,13 @@ a .work-image:hover {
 /* Contact-specific pseudo-classes */
 .container-contact a:link,
 .container-contact a:visited {
-  color: #000000;
+  color: black;
   padding: 3px 10px;
 }
   
 .container-contact a:hover {
   color: white;
-  background-color: #ff8906;
+  background-color: var(--link-hover-bg-color);
   padding: 3px 10px;
 }
 
@@ -333,7 +335,7 @@ a .work-image:hover {
   text-align: right;
   line-height: 1;
   padding: 0px 30px 0px 0px;
-  border-right: 5px solid #000000;
+  border-right: 5px solid black;
   min-width: 200px;
 }
 
@@ -343,9 +345,6 @@ a .work-image:hover {
   padding: 0px 0px 0px 30px;
   width: 100%;
 }
-
-
-
 
 /* MEDIA QUERIES */
 
@@ -407,13 +406,13 @@ a .work-image:hover {
   
   .mugshot h5 {
     grid-area: mugshot-text;
-    background-color: #f25f4c9b;
+    background-color: var(--card-overlay);
     text-align: center;
     align-items: center;
     padding: 3px 10px;
   }
 
-    /* About section: grid 2 columns */
+  /* About section: grid 2 columns */
   .page-section-about {
     display: grid;
     margin: 30px 0px;
@@ -433,8 +432,7 @@ a .work-image:hover {
     margin: 10px 0px;
   }
 
-
-    /* Work section: grid 2 columns: second column holds nested grid for portfolio work images */
+  /* Work section: grid 2 columns: second column holds nested grid for portfolio work images */
   .page-section-work {
     display: grid;
     margin: 30px 0px;
@@ -499,7 +497,7 @@ a .work-image:hover {
     grid-row-end: 6;
   }
 
-    /* Contact section: grid 2 columns: second column holds nested flexbox for contact info links */
+  /* Contact section: grid 2 columns: second column holds nested flexbox for contact info links */
   .page-section-contact {
     display: grid;
     margin: 0px 0px;
@@ -522,7 +520,7 @@ a .work-image:hover {
     margin: 10px 0px;
   }
 
-    /* Sections general design */
+  /* Sections general design */
   .title-about,
   .title-work,
   .title-contact {
@@ -530,7 +528,7 @@ a .work-image:hover {
     text-align: left;
     line-height: 1;
     padding: 0px;
-    border-right: 0px solid #000000;
+    border-right: 0px solid black;
   }
 
   .container-about,
