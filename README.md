@@ -16,9 +16,13 @@ N/A
 
 Navigation bar links to sections with different information within the page. Placeholder project images are setup with links, ready to be modified, as future projects are completed. Links to contact options in new tabs.
 
+https://clairepricegithub.github.io/portfolio-claire-price/
+
 ![screenshot](images/screenshot_1.png)
 
 ![screenshot](images/screenshot_2.png)
+
+
 
 ## Credits
 
