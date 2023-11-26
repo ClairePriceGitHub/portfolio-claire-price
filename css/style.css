@@ -197,9 +197,11 @@ p {
 .container-work-images {
   grid-area: container-work-images;
   display: grid;
+  overflow: hidden;
+  padding: 0px;
   column-gap: 30px;
   row-gap: 30px;
-  margin-left: 30px;
+  margin: 0px 30px;
   grid-template-columns: repeat (2, 1fr);
   grid-template-rows: repeat (4, 1fr);
 }
@@ -234,9 +236,6 @@ p {
   grid-column-end: 2;
   grid-row-start: 4;
   grid-row-end: 5;
-  width: auto;
-  height: 200px;
-  object-fit: cover;
 }
 
 .image-website {
@@ -244,9 +243,6 @@ p {
   grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
-  width: auto;
-  height: 200px;
-  object-fit: stretch;
 }
 
 .image-red-wall,
@@ -254,9 +250,14 @@ p {
 .image-car,
 .image-sea,
 .image-website {
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
+}
 
+.container-work-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Flexbox for card overlay */
