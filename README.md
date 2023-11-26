@@ -14,7 +14,7 @@ N/A
 
 ## Usage
 
-Navigation bar links to sections with different information within the page. Placeholder project images are setup with links, ready to be modified, as future projects are completed. Links to contact options in new tabs.
+Navigation bar links to sections with different information within the page. Placeholder project images are setup with links, ready to be modified, as future projects are completed. Links to contact options in new tabs (email link currently set as placeholder). 
 
 https://clairepricegithub.github.io/portfolio-claire-price/
 
