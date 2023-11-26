@@ -23,12 +23,15 @@ Navigation bar links to sections with different information within the page. Pla
 ## Credits
 
 index.html lines 62-103
+
 freeCodeCamp. 2018, December 27. *How to create an image gallery with CSS Grid*. https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/
 
 index.html lines 122-123
+
 Koishigawa, Kris. 2020, September 8. *How to Use HTML to Open a Link in a New Tab*. freeCodeCamp. https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/ 
 
 style.css Lines 273 and 286
+
 Moss, Anthony. (no date). *Cool grayscale hover effect*. Code Pen. https://codepen.io/AnthonyMoss/pen/RwwyQQ 
 
 ## License
